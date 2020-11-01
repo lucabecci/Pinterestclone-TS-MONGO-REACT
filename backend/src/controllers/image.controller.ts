@@ -5,7 +5,10 @@ import path from "path";
 import Image from "../models/Image";
 import { bodyCheck, createCheckCamps, IDCheck } from "../helpers/photo.checks";
 
-const getImages: Handler = async (req: Request, res: Response): Promise<Response> => {
+const getImages: Handler = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
   try {
     const images = await Image.find();
     return res.status(200).json({
@@ -21,7 +24,10 @@ const getImages: Handler = async (req: Request, res: Response): Promise<Response
   }
 };
 
-const createImage: Handler = async (req: Request, res: Response): Promise<Response> => {
+const createImage: Handler = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
   try {
     const { title, description } = req.body;
     const newImage = {
@@ -51,7 +57,10 @@ const createImage: Handler = async (req: Request, res: Response): Promise<Respon
   }
 };
 
-const getImage: Handler = async (req: Request, res: Response): Promise<Response> => {
+const getImage: Handler = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
   try {
     const id: string = req.params.id;
     const checked = IDCheck(id);
@@ -82,7 +91,10 @@ const getImage: Handler = async (req: Request, res: Response): Promise<Response>
   }
 };
 
-const deleteImage: Handler = async (req: Request, res: Response): Promise<Response> => {
+const deleteImage: Handler = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
   try {
     const id: string = req.params.id;
     const checked = IDCheck(id);
@@ -113,7 +125,10 @@ const deleteImage: Handler = async (req: Request, res: Response): Promise<Respon
   }
 };
 
-const editImage: Handler = async (req: Request, res: Response): Promise<Response> => {
+const editImage: Handler = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
   try {
     const id: string = req.params.id;
     const { title, description } = req.body;

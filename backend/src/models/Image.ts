@@ -1,22 +1,28 @@
-import { Schema, model, Document, SchemaOptions, SchemaTimestampsConfig } from "mongoose";
+import {
+  Schema,
+  model,
+  Document,
+  SchemaOptions,
+  SchemaTimestampsConfig,
+} from "mongoose";
 
 const photoSchema: Schema = new Schema(
   {
-    title: <SchemaOptions> {
+    title: <SchemaOptions>{
       type: String,
       required: true,
     },
-    description: <SchemaOptions> {
+    description: <SchemaOptions>{
       type: String,
       required: true,
     },
-    imagePath: <SchemaOptions> {
+    imagePath: <SchemaOptions>{
       type: String,
       required: true,
     },
   },
   {
-    timestamps: <SchemaTimestampsConfig> true,
+    timestamps: <SchemaTimestampsConfig>true,
   }
 );
 

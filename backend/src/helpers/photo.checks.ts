@@ -6,7 +6,7 @@ export const createCheckCamps = (
   if (title == null || description == null || imagePath == null) {
     return true;
   }
-  return false
+  return false;
 };
 
 export const IDCheck = (id: string): boolean => {
