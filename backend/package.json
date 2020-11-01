@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf ./dist",
+    "start": "yarn run build && node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "pretty": "npx prettier --write src/*"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "mongoose": "^5.10.11",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "rimraf": "^3.0.2",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.8",
+    "@types/express": "^4.17.8",
+    "@types/fs-extra": "^9.0.2",
+    "@types/mongoose": "^5.7.36",
+    "@types/morgan": "^1.9.2",
+    "@types/multer": "^1.4.4",
+    "@types/node": "^14.14.6",
+    "@types/uuid": "^8.3.0",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
+}
